@@ -1,0 +1,22 @@
+{
+  "name": "vesselize-docs",
+  "version": "1.0.0",
+  "description": "Vesselize documentation.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": "git@github.com:vesselize/docs.git",
+  "author": "felixpy <felixpy.1993@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.7.1",
+    "@vuepress/plugin-back-to-top": "^1.7.1",
+    "@vuepress/plugin-google-analytics": "^1.7.1",
+    "@vuepress/plugin-medium-zoom": "^1.7.1",
+    "@vuepress/plugin-nprogress": "^1.7.1",
+    "vuepress": "^1.7.1"
+  }
+}
