@@ -7,16 +7,24 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "repository": "git@github.com:vesselize/docs.git",
   "author": "felixpy <felixpy.1993@gmail.com>",
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@vuepress/plugin-active-header-links": "^1.7.1",
     "@vuepress/plugin-back-to-top": "^1.7.1",
     "@vuepress/plugin-google-analytics": "^1.7.1",
     "@vuepress/plugin-medium-zoom": "^1.7.1",
     "@vuepress/plugin-nprogress": "^1.7.1",
+    "husky": "^4.3.0",
     "vuepress": "^1.7.1"
   }
 }
