@@ -1,5 +1,0 @@
-# Vue API
-
-WIP
-
-## VueVesselize

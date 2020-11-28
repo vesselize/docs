@@ -10,15 +10,15 @@ function getGuideSidebar(groups = []) {
         'providers',
         'container',
         'dependencies',
-        'context',
-      ],
+        'context'
+      ]
     },
     {
       title: groups[1],
       sidebarDepth: 1,
       collapsable: false,
-      children: ['integration-vue', 'integration-react'],
-    },
+      children: ['integration-vue', 'integration-react']
+    }
   ];
 }
 
@@ -26,47 +26,48 @@ function getAPISidebar(groups = []) {
   return [
     {
       title: groups[0],
-      sidebarDepth: 0,
+      sidebarDepth: 2,
       collapsable: false,
-      children: ['vesselize'],
+      children: ['providers', 'container']
     },
     {
       title: groups[1],
       sidebarDepth: 2,
       collapsable: false,
-      children: ['vue'],
+      children: ['vue-plugin', 'vue-composition']
     },
     {
       title: groups[2],
       sidebarDepth: 2,
       collapsable: false,
-      children: ['react'],
-    },
+      children: ['react-component', 'react-hooks', 'react-hoc']
+    }
   ];
 }
 
 module.exports = {
-  base: '/docs/',
+  base: '/',
   head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
   locales: {
     '/': {
       lang: 'en-US',
       title: 'vesselize',
       description:
-        'A JavaScript IoC container that works seamlessly with Vue.js and React.',
+        'A JavaScript IoC container that works seamlessly with Vue.js and React.'
     },
     '/zh/': {
       lang: 'zh-CN',
       title: 'vesselize',
-      description: '一个与 Vue.js 及 React 等框架无缝集成的 IoC 容器',
-    },
+      description: '一个与 Vue.js 及 React 等框架无缝集成的 IoC 容器'
+    }
   },
 
   themeConfig: {
     logo: '/images/logo.png',
 
-    repo: 'https://github.com/vesselize',
+    repo: 'https://github.com/vesselize/docs',
     repoLabel: 'Github',
+    docsBranch: 'main',
     docsDir: 'docs',
     lastUpdated: true,
     editLinks: true,
@@ -81,24 +82,24 @@ module.exports = {
         serviceWorker: {
           updatePopup: {
             message: 'New content is available.',
-            buttonText: 'Refresh',
-          },
+            buttonText: 'Refresh'
+          }
         },
         nav: [
           {
             text: 'Guide',
-            link: '/guide/intro.html',
+            link: '/guide/intro.html'
           },
           {
             text: 'API Reference',
-            link: '/api/vesselize.html',
-          },
+            link: '/api/providers.html'
+          }
         ],
         sidebarDepth: 2,
         sidebar: {
           '/guide/': getGuideSidebar(['Guide', 'Integration']),
-          '/api/': getAPISidebar(['Vesselize', 'Vue.js', 'React']),
-        },
+          '/api/': getAPISidebar(['Vesselize', 'Vue.js', 'React'])
+        }
       },
       '/zh/': {
         editLinkText: '在 GitHub 上编辑此页',
@@ -107,21 +108,21 @@ module.exports = {
         serviceWorker: {
           updatePopup: {
             message: '站点内容有更新',
-            buttonText: '刷新',
-          },
+            buttonText: '刷新'
+          }
         },
         nav: [
           {
             text: '指南',
-            link: '/zh/guide/intro.html',
+            link: '/zh/guide/intro.html'
           },
           {
             text: 'API 参考',
-            link: '/zh/api/vesselize.html',
-          },
-        ],
-      },
-    },
+            link: '/zh/api/providers.html'
+          }
+        ]
+      }
+    }
   },
 
   plugins: [
@@ -133,14 +134,14 @@ module.exports = {
     [
       '@vuepress/google-analytics',
       {
-        ga: 'G-J4BSS4W6TX',
-      },
+        ga: 'G-J4BSS4W6TX'
+      }
     ],
     [
       '@vuepress/search',
       {
-        searchMaxSuggestions: 10,
-      },
-    ],
-  ],
+        searchMaxSuggestions: 10
+      }
+    ]
+  ]
 };

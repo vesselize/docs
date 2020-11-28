@@ -9,5 +9,5 @@ Through Vesselize, you can easily use instances anywhere and resolve their depen
 ## Concepts
 
 - **Providers** - Providers are the classes, factory methods, or any values that can be used to register in the Vesselize container.
-- **Container** - A container is used to create, manage, and query instances.
+- **Container** - A container is used to create, manage, and acquire instances.
 - **Context** - A context can hold independent instances.

@@ -16,20 +16,8 @@ npm i vesselize
 
 ## Vue.js
 
-Integrate into your Vue.js(3.x) application through the Composition API.
-
-```bash
-yarn add @vesselize/vue
-# OR
-npm i @vesselize/vue
-```
+Integrate into your Vue.js(3.x) application through the Composition API. See [Integration Guide](./integration-vue.md).
 
 ## React
 
-Integrate into your React(16.8+) application through Hooks or HOC.
-
-```bash
-yarn add @vesselize/react
-# OR
-npm i @vesselize/react
-```
+Integrate into your React(16.8+) application through Hooks or HOC. See: [Integration Guide](./integration-react.md).

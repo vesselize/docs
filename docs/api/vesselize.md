@@ -1,3 +1,0 @@
-# Vesselize API
-
-WIP
