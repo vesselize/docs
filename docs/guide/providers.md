@@ -2,9 +2,9 @@
 
 Providers are the classes, factory methods, or any values that can be used to register in the Vesselize container.
 
-## Class
+## Class Provider
 
-Simple constructor without parameters.
+JavaScript constructors that do not require additional parameters are all available providers.
 
 ```js
 class UserService {
@@ -14,11 +14,16 @@ class UserService {
 }
 ```
 
-## Custom Providers
+In most cases, since the function name will be lost after the production build, you must specify the name of the provider through `token` option.
 
-### Class
+```js
+const provider = {
+  token: 'UserService',
+  useClass: UserService
+};
+```
 
-You can specify the name of the provider through custom options.
+The `token` can also be a Symbol:
 
 ```js
 // Specify a symbol as the name of the provider.
@@ -29,30 +34,25 @@ const provider = {
 };
 ```
 
-### Factory
+## Factory Provider
 
-Return any instance including promise through factory method.
+Use factory methods to customize instance creation, you can return any instance including promise.
 
-#### Create Customized Instance
-
-```js
-function createAdminUserService() {
-  return new UserService({
-    auth: ['ADMIN']
-  });
-}
-```
-
-Definition of provider:
+### Create Customized Instance
 
 ```js
+const roles = ['ADMIN'];
+
 const provider = {
-  token: 'AdminUserService',
-  useFactory: createAdminUserService
+  token: 'AuthService',
+  useFactory() {
+    // customize creation
+    return new RoleAuthService(roles);
+  }
 };
 ```
 
-#### Create Async Instance
+### Create Async Instance
 
 Sometimes, the instance that needs to be created depends on some remote data, and we can return a promise through the factory method.
 
@@ -61,7 +61,7 @@ Sometimes, the instance that needs to be created depends on some remote data, an
 async function createAuthService() {
   const roles = await fetchRoles();
 
-  return new AuthService(roles);
+  return new RoleAuthService(roles);
 }
 ```
 
@@ -74,7 +74,7 @@ const provider = {
 };
 ```
 
-### Value
+## Value Provider
 
 Declared values such as configuration, constants, etc.
 

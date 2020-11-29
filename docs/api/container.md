@@ -28,7 +28,7 @@ export default vesselize;
 
 - **References**
 
-  - [Providers](./providers.md)
+  - [Providers](../guide/providers.md)
   - [Create Vesselize Container](../guide/container.md#create-container)
 
 ## Instance Methods

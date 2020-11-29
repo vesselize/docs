@@ -15,7 +15,10 @@ import { Constants } from './config/constants';
 const vesselize = new Vesselize({
   providers: [
     // class provider
-    UserService,
+    {
+      token: 'UserService',
+      useClass: UserService
+    },
 
     // factory provider
     {

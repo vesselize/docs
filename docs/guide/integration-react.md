@@ -21,7 +21,10 @@ import UserService from './services/UserService';
 import RoleAuthService from './services/RoleAuthService';
 
 export default [
-  UserService,
+  {
+    token: 'UserService',
+    useClass: UserService
+  },
 
   // Custom provider name
   {

@@ -28,7 +28,7 @@ function getAPISidebar(groups = []) {
       title: groups[0],
       sidebarDepth: 2,
       collapsable: false,
-      children: ['providers', 'container']
+      children: ['container']
     },
     {
       title: groups[1],
@@ -92,7 +92,7 @@ module.exports = {
           },
           {
             text: 'API Reference',
-            link: '/api/providers.html'
+            link: '/api/container.html'
           }
         ],
         sidebarDepth: 2,
@@ -118,7 +118,7 @@ module.exports = {
           },
           {
             text: 'API 参考',
-            link: '/zh/api/providers.html'
+            link: '/zh/api/container.html'
           }
         ]
       }

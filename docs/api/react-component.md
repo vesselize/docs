@@ -10,5 +10,5 @@ The following components are included in the [@vesselize/react](https://www.npmj
 
 - **Reference**
 
-  - [Providers](./providers.md)
+  - [Providers](../guide/providers.md)
   - [Add VesselizeProvider](../guide/integration-react.md#add-vesselizeprovider)

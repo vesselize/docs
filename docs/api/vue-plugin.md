@@ -15,5 +15,5 @@ The following APIs are included in the [@vesselize/vue](https://www.npmjs.com/pa
 
 - **Reference**
 
-* [Providers](./providers.md)
+* [Providers](../guide/providers.md)
 * [Create Vue Vesselize Plugin](../guide/integration-vue.md#create-vue-plugin)

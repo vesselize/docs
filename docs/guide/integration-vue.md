@@ -25,7 +25,10 @@ import RoleAuthService from './services/RoleAuthService';
 
 const vesselize = createVesselize({
   providers: [
-    UserService,
+    {
+      token: 'UserService',
+      useClass: UserService
+    },
 
     // Custom provider name
     {
@@ -75,7 +78,7 @@ export default {
     const userService = useInstance('UserService');
     const authService = useInstance('AuthService');
 
-    userService.getUser(data => {
+    userService.getUser().then(data => {
       user.value = data;
       isAdmin.value = authService.isAdmin(data);
     });
