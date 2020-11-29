@@ -70,7 +70,7 @@ useEffect(() => {
 
 - **Returns**
 
-Return the source class or factory.
+Return the provider class or factory.
 
 - **Usage**
 

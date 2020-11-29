@@ -120,8 +120,6 @@ Return the promise that will resolve the provider instance in specific context.
 
 - **Usage**
 
-* **Usage**
-
 ```js
 const fooUserContext = {
   id: 100000
@@ -155,7 +153,7 @@ vesselize.getInContextAsync('AuthService', barUserContext).then(barAuthService =
 
 - **Returns**
 
-Return the source class/factory.
+Return the provider class/factory.
 
 - **Usage**
 

@@ -38,6 +38,20 @@ const vesselize = createVesselize({
 export default vesselize;
 ```
 
+### Use Vue Plugin
+
+```js
+import { createApp } from 'vue';
+import vesselize from './vesselize';
+import App from './App.vue';
+
+const app = createApp(App);
+
+app.use(vesselize);
+
+app.mount('#app');
+```
+
 ### Acquire Instance in Component
 
 Through the `useInstance` and other composition APIs, we can directly get the instance in the Vue component.
@@ -95,7 +109,7 @@ const store = createStore({
   },
   actions: {
     async setUser(context) {
-      const vesselize = this.vesselize;
+      const { vesselize } = this;
       const userService = vesselize.get('UserService');
 
       const user = await userService.getUser();
