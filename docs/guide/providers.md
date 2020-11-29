@@ -1,6 +1,6 @@
 # Providers
 
-Providers are the classes, factory methods, or any values that can be used to register in the Vesselize container.
+Providers are generally constructors that can be instantiated. It can also be any factory method and declared values. They will all be registered in the container for dependency lookup and injection.
 
 ## Class Provider
 

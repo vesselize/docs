@@ -1,6 +1,6 @@
 # Container
 
-A container is used to create, manage, and acquire instances.
+The responsibility of the container is to initialize the instances and resolve their dependencies.
 
 ## Create Container
 
