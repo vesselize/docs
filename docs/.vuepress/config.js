@@ -65,8 +65,9 @@ module.exports = {
   themeConfig: {
     logo: '/images/logo.png',
 
-    repo: 'https://github.com/vesselize/docs',
+    repo: 'https://github.com/vesselize',
     repoLabel: 'Github',
+    docsRepo: 'vesselize/docs',
     docsBranch: 'main',
     docsDir: 'docs',
     lastUpdated: true,
